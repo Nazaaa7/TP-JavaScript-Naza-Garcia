@@ -12,4 +12,6 @@ if(edad >=0 && edad <= 12){
     console.log("Usted es un adulto");
 }else if(edad >60 && edad <= 110){
     console.log("Usted es un adulto");
+}else{
+    console.log("La edad ingresada no es válida")
 }
