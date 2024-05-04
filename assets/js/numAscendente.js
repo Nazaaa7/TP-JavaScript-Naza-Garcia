@@ -1,26 +1,29 @@
 //Escribe un programa que pida al usuario tres números y luego los muestre
-//en orden ascendente.
+//en orden ascendente. 
 
-let numeroUno = parseInt(prompt("Ingrese un número"));
-let numeroDos = parseInt(prompt("Ingrese un segundo número"));
-let numeroTres = parseInt(prompt("Ingrese un tercer número"));
+let numero1 = parseInt(prompt("Ingresa el primer número:"));
+let numero2 = parseInt(prompt("Ingresa el segundo número:"));
+let numero3 = parseInt(prompt("Ingresa el tercer número:"));
+let numMenor, numMedio, numMayor;
 
-let temp;
-if (numeroUno > numeroDos) {
-    temp = numeroUno;
-    numeroUno = numeroDos;
-    numeroDos = temp;
+
+if (numero1 <= numero2) {
+    numMenor = numero1;
+    numMayor = numero2;
+} else {
+    numMenor = numero2;
+    numMayor = numero1;
 }
-if (numeroDos > numeroTres) {
-    temp = numeroDos;
-    numeroDos = numeroTres;
-    numeroTres = temp;
-}
-if (numeroUno > numeroDos) {
-    temp = numeroUno;
-    numeroUno = numeroDos;
-    numeroDos = temp;
+if (numero3 <= numMenor) {
+    numMedio = numMenor;
+    numMenor = numero3;
+} else if (numero3 >= numMayor) {
+    numMedio = numMayor;
+    numMayor = numero3;
+} else {
+    numMedio = numero3;
 }
 
-// Mostrar los números ordenados
-console.log("Números ordenados en forma ascendente:", numeroUno, numeroDos, numeroTres);
+console.log(numMenor);
+console.log(numMedio);
+console.log(numMayor);
