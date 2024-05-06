@@ -27,3 +27,6 @@ if (numero3 <= numMenor) {
 console.log(numMenor);
 console.log(numMedio);
 console.log(numMayor);
+
+
+

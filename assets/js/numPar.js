@@ -5,6 +5,8 @@ let numero = parseInt(prompt("Ingrese un número"));
 
 if (numero % 2 == 0) {
     console.log("El número que ingresó es par");
-} else {
+} else if(numero % 2 == 1){
     console.log("El número que ingresó es impar");
+}else{
+    console.log("El número que ingresó no es válido");
 }
