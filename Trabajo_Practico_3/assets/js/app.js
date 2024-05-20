@@ -1,8 +1,8 @@
-let tareas = ['lengua', 'matematica'];
-
+let tareas = [];
+const regex = /^\S.*\S$/;
 function agregarTarea() {
     let nombreTarea = prompt("Ingrese el nombre de la tarea:");
-    if (nombreTarea === "") {
+    if (!regex.test(tareas )) {
         alert("Error: El nombre de la tarea no puede estar vacío ni contener espacios vacíos al principio ni al final.");
     } else {
         tareas.push(nombreTarea);
@@ -16,11 +16,12 @@ function listarTareas() {
     } else {
         let lista = "Lista de tareas:\n";
         for (let i = 0; i < tareas.length; i++) {
-            lista += `${i + 1}. ${tareas[i]}\n`;
+            lista += (i + 1) + ". " + tareas[i] + "\n";
         }
         alert(lista);
     }
 }
+
 
 function editarTarea() {
     let nombreTarea = prompt("Ingrese el nombre de la tarea a editar:");
@@ -28,7 +29,7 @@ function editarTarea() {
     for (let i = 0; i < tareas.length; i++) {
         if (tareas[i] === nombreTarea) {
             let nombreTareaNueva = prompt("Ingrese el nuevo nombre de la tarea:");
-            if (nombreTareaNueva === "") {
+            if (!regex.test(tareas )) {
                 alert("Error: El nuevo nombre de la tarea no puede estar vacío ni contener espacios vacíos al principio ni al final.");
             } else {
                 tareas[i] = nombreTareaNueva;
@@ -80,8 +81,7 @@ function mostrarMenu() {
             default:
                 alert("Opción no válida. Intente nuevamente.");
         }
-    } while (opcion !== 4);
+    } while (opcion !== 5);
 }
 
-// Ejecutar el programa
 mostrarMenu();
